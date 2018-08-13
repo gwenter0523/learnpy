@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 from sys import exit
 
-# def phantom_blood():
-#     jojo = "Jonathan"
-#     print("")
+def phantom_blood():
+    jojo = "Jonathan"
+    print("")
 
 def battle_tendency():
     return
