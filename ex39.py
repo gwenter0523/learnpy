@@ -1,6 +1,7 @@
 # dict
 # 字典
 # del dict[key] 从字典中删除东西
+# dic.get(key, default)
 
 states = {
     'Oregon': 'OR',
