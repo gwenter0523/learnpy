@@ -21,12 +21,14 @@ else:
     PHRASES_FIRST = False
 
 # load up the word feom the website
+# urlopen(URL) 打开URL
 for word in urlopen(WORD_URL).readlines():
     WORDS.append(str(word.strip(), encoding = "utf-8"))
 
 def convert(snippet, phrase):
     # 做一个classname和参数name的数组出来
     # 从WORDS中随机获取“snippet里的%%%总数”个元素，并处理为首字母大写
+    # random.sample(list,5) 从list中随机获取5个元素，作为一个片段返回
     class_name = [w.capitalize() for w in random.sample(WORDS, snippet.count("%%%"))]
     other_name = random.sample(WORDS, snippet.count("***"))
     results = []
@@ -61,7 +63,7 @@ def convert(snippet, phrase):
 try:
     while True:
         snippets = list(PHRASES.keys())
-        # random.shuffle()?
+        # random.shuffle(list)，给list里的项目随机排序 
         random.shuffle(snippets)
 
         for snippet in snippets:
@@ -76,4 +78,3 @@ try:
         print(f"ANSWER: {answer}\n\n")
 except EOFError:
     print("\nBye")
-
