@@ -18,6 +18,7 @@ Python Note
   - 布尔值可以用and、or和not运算
 
 - 空值(None)
+  - 与空值None进行比较时，用 `is` 或者 `is not`，永远不要用等号来比较！
 
 - 变量
   - 变量名 = 变量值( 如a = 10 )
